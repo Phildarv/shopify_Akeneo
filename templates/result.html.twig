@@ -1,0 +1,50 @@
+<table width="100%">
+    <tr>
+        <td width="20%" valign="top">
+            <p>Shopify product</p>
+            <textarea style="border:none" name="" id="myTextarea" cols="70" rows="200">{{ shopify_product }}</textarea>
+        </td>
+        <td width="20%">
+            <p>Get Akeneo Attributes</p>
+            <textarea style="border:none; border-left: #ccc 1px solid; padding-left: 20px" name="" id="myTextarea" cols="70" rows="30">{{ akeneo_attributes  }}</textarea>
+
+            <p>Get Family Obj </p>
+            <textarea style="border:none; border-left: #ccc 1px solid; padding-left: 20px" name="" id="myTextarea" cols="70" rows="30">{{ akeneo_family }}</textarea>
+            <hr>
+            <p>Get Family Variants Obj </p>
+            <textarea style="border:none; border-left: #ccc 1px solid; padding-left: 20px" name="" id="myTextarea" cols="70" rows="200"> {{ akeneo_family_variants }}</textarea>
+        </td>
+        <td width="20%" valign="top">
+            <p>Simple Shopify Product</p>
+            <textarea style="border:none" name="" id="myTextarea" cols="70" rows="200">{{ shopify_simple_product }}</textarea>
+        </td>
+        <td width="20%" valign="top">
+            <p>Final Akeneo Products [{{ akeneo_total_final_products }}]</p>
+            <textarea style="border:none" name="" id="myTextarea" cols="70" rows="200">
+                {{ akeneo_final_products }}
+                {% for product in akeneo_final_products  %}
+                {{ product }}
+                {% endfor %}
+            </textarea>
+        </td>
+    </tr>
+</table>
+
+<script>
+    const ele = document.getElementsByTagName('textarea');
+
+    for (let i = 0; i <= ele.length - 1; i++) {
+        var badJSON = ele[i].value;
+        var parseJSON = JSON.parse(badJSON);
+        var JSONInPrettyFormat = JSON.stringify(parseJSON, undefined, 4);
+        ele[i].value = JSONInPrettyFormat;
+    }
+
+
+</script>
+* when doing data mapping is it better to clean the existing attributes and create our owns from scratch to match Shopify
+<style>
+    p {
+        background: #5eb5e0;
+    }
+</style>
