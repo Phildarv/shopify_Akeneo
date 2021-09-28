@@ -37,7 +37,7 @@ class SimpleProduct
         $this->shopify_sku           = $data['variants'][$index]['sku'];
         $this->shopify_product_id   = $data['id'];
         $this->shopify_title        = $data['title'];
-        $this->shopify_vendor       = $data['title'];
+        $this->shopify_vendor       = $data['vendor'];
         $this->shopify_description  = $data['body_html'];
         $this->shopify_family       = $data['product_type'];
         $this->shopify_tags         = $data['tags'];
