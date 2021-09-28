@@ -7,6 +7,9 @@
 # Email spool folder
 /app/spool/*
 
+/.idea
+.idea
+
 # Cache, session files and logs (Symfony3)
 /var/cache/*
 /var/logs/*
@@ -14,7 +17,7 @@
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
-
+/var/.env
 # Logs (Symfony4)
 /var/log/*
 !var/log/.gitkeep
@@ -50,4 +53,4 @@
 
 # Embedded web-server pid file
 /.web-server-pid
-/.idea
+
