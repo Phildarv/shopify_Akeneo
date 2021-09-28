@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00298312-8615-47a7-93a7-d1a4cb7ad625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/var/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Providers/Mapping/ShopifyProductProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Providers/Mapping/ShopifyProductProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,7 @@
       <workItem from="1631735262597" duration="1155000" />
       <workItem from="1631802995753" duration="2180000" />
       <workItem from="1632150167116" duration="85559000" />
-      <workItem from="1632845546570" duration="1535000" />
+      <workItem from="1632845546570" duration="1793000" />
     </task>
     <servers />
   </component>

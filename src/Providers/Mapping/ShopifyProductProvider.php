@@ -1,21 +1,16 @@
 <?php
 
 namespace App\Providers\Mapping;
-
-
-use App\Models\Shopify\Product;
 use App\Models\Shopify\SimpleProduct;
 
 class ShopifyProductProvider
 {
 
-    public $shopify_product;
     public $akeneo_product;
     public $data;
 
     //*todo remove product object*/
     public function __construct($data) {
-        $this->shopify_product = new Product($data);
         $this->data =$data;
     }
 
@@ -28,7 +23,7 @@ class ShopifyProductProvider
     }
 
     public function isSimple(): bool {
-        return (count($this->shopify_product->options) == 1 && count($this->shopify_product->variants)==1);
+        return (count($this->data['options']) == 1 && count($this->data['variants'])==1);
     }
 
     public function getProductAttributes(): array {
@@ -135,10 +130,10 @@ class ShopifyProductProvider
        return array_merge($attributes,$options);
     }
     /* get product options values >> match variants in family*/
-    public function getProductOptions() {
+    public function getProductOptions(): array {
         $options = [];
-        if (is_array($this->shopify_product->options)) {
-            foreach ($this->shopify_product->options as $option ) {
+        if (is_array($this->data['options'])) {
+            foreach ($this->data['options'] as $option ) {
                     if(strtolower($option['name'])=='title') {
                         $options["shopify_option_1"] = $option['values'];
                     } else {
